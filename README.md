@@ -10,7 +10,7 @@ The goal is to build a working help desk environment from scratch so you can get
 
 ## Video Demonstration
 
-- [YouTube: How To Install osTicket with Prerequisites](https://www.youtube.com)
+- [YouTube: How to Install osTicket on an Azure Virtual Machine | Build Your Own Help Desk Ticketing System]([https://www.youtube.com](https://www.youtube.com/watch?v=rIQClpfiJ70))
 
 
 ## Environments and Technologies Used
