@@ -4,7 +4,7 @@
 
 # osTicket - Prerequisites and Installation
 
-In this tutorial, I’ll go through the full process of setting up **osTicket**, a help desk ticketing system, on a **Windows 10 Virtual Machine** using **Microsoft Azure**. This includes creating the Virtual Machine, installing the necessary dependencies like **IIS**, **PHP**, and **MySQL**, and configuring everything to get osTicket up and running.
+In this beginner-friendly tutorial, I’ll go through the full process of setting up **osTicket**, a help desk ticketing system, on a **Windows 10 Virtual Machine** using **Microsoft Azure**. This includes creating the Virtual Machine, installing the necessary dependencies like **IIS**, **PHP**, and **MySQL**, and configuring everything to get osTicket up and running.
 
 The goal is to build a working help desk environment from scratch so you can get hands-on experience with how ticketing systems are installed and managed. By the end, you’ll have a complete osTicket setup that you can log into, create tickets, and explore both the admin and end-user sides of the system.
 
