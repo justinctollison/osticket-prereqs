@@ -8,13 +8,12 @@ In this tutorial, I’ll go through the full process of setting up **osTicket**,
 
 The goal is to build a working help desk environment from scratch so you can get hands-on experience with how ticketing systems are installed and managed. By the end, you’ll have a complete osTicket setup that you can log into, create tickets, and explore both the admin and end-user sides of the system.
 
----
+
 
 ## Video Demonstration
 
 - [YouTube: How To Install osTicket with Prerequisites](https://www.youtube.com)
 
----
 
 ## Environments and Technologies Used
 
@@ -22,20 +21,19 @@ The goal is to build a working help desk environment from scratch so you can get
 - Remote Desktop
 - Internet Information Services (IIS)
 
----
+
 
 ## Operating Systems Used
 
 - Windows 10 (21H2)
 
----
+
 
 ## List of Prerequisites
 
 - Azure Virtual Machine
 - [osTicket Installation Files](https://drive.usercontent.google.com/download?id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD&export=download&authuser=0)
 
----
 
 ## Installation Steps
 
