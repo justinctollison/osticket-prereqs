@@ -97,7 +97,7 @@ We're going to create a new directory in our C: drive called **PHP**, it will lo
 
 ### Step 6: Installing VC Restribution and MySQL
 
-Go back into the **osTicket-Installation-Files folder** and find **VC_redist** and install it. Next, find **MySQL (mysql-5.5.62-win32.msi)** and let's install it. Pick **Typical** and then when you get to the end, launch the MySQL configuration Wizard, make sure it's checked. Choose **Standard Configuration** and click through until you get to Modify Security Settings. For the Password, pick **root**. Make sure you put it on a notepad somewhere so you don't forget, you will not be able to access the password later. Making the password "root" keeps it as simple as possible for this lab. The Username will also be "root". MySQL will be our database.
+The version of PHP that osTicket is using needs Microsoft Visual C++ Redistributable to run properly. So go back into the **osTicket-Installation-Files folder** and find **VC_redist** and install it. Next, find **MySQL (mysql-5.5.62-win32.msi)** and let's install it. Pick **Typical** and then when you get to the end, launch the MySQL configuration Wizard, make sure it's checked. Choose **Standard Configuration** and click through until you get to Modify Security Settings. For the Password, pick **root**. Make sure you put it on a notepad somewhere so you don't forget, you will not be able to access the password later. Making the password "root" keeps it as simple as possible for this lab. The Username will also be "root". MySQL will be our database.
 
 <br>
 <img width="1000" height="696" alt="image" src="https://github.com/user-attachments/assets/d259c447-51a0-4a6e-b766-8b3653685b3c" />
