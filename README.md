@@ -141,6 +141,8 @@ Open the new Connection and now we're going to create a new database for our osT
 </p>
 
 <p>
-Congratulations! You now have your very own ticketing set up and installed on your Virtual Machine using osTicket. This is a wonderful start to getting some practice with ticketing services.
+Congratulations! You now have your very own ticketing set up and installed on your Virtual Machine using osTicket. This is a wonderful start to getting some practice with ticketing services. You can freely navigate to the web pages for both logging in to the Help desk http://localhost/osTicket/scp/login.php and logging in as an End User to create Tickets http://localhost/osTicket/ 
 </p>
+<img width="1906" height="647" alt="image" src="https://github.com/user-attachments/assets/39c30805-9800-4b79-b0f1-16a900a9b009" />
+
 <br />
