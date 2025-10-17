@@ -49,15 +49,15 @@ Once your VM is deployed and ready, use Remote Desktop to connect to it. You're 
 
 ---
 
-### Step 2: Enabling Internet Information Services (ISS)
+### Step 2: Enabling Internet Information Services (IIS)
 
-After connecting to your Virtual Machine, you will have to enable the Internet Information Services or ISS and CGI. This can be accessed by searching for the **Control Panel** in the Search Bar and then going to the **Control Panel** → **Uninstall a Program**. From inside here, there will be an option in the left panel called **Turn Windows features on or off**, with a shield icon. Select this option and then a list will appear titled **Windows Features**. Scroll down this list until you find the Internet Information Services and enable it. From inside Internet Information Services, go to **World Wide Web Services → Application Development Features** and then scroll down to **CGI** and enable that. This will enable us to use a web server with osTicket.
+After connecting to your Virtual Machine, you will have to enable the Internet Information Services or IIS and CGI. This can be accessed by searching for the **Control Panel** in the Search Bar and then going to the **Control Panel** → **Uninstall a Program**. From inside here, there will be an option in the left panel called **Turn Windows features on or off**, with a shield icon. Select this option and then a list will appear titled **Windows Features**. Scroll down this list until you find the Internet Information Services and enable it. From inside Internet Information Services, go to **World Wide Web Services → Application Development Features** and then scroll down to **CGI** and enable that. This will enable us to use a web server with osTicket.
 
 <br>
 <img width="1141" height="639" alt="image" src="https://github.com/user-attachments/assets/bbeaa54d-e434-4d64-a24b-e0909a84d871" />
 <br>
 
-You can check this is working by going to `127.0.0.1` in your Web Bowser, this is the default webpage for ISS.
+You can check this is working by going to `127.0.0.1` in your Web Bowser, this is the default webpage for IIS.
 
 <br>
 <img width="1180" height="725" alt="image" src="https://github.com/user-attachments/assets/a946e197-85c0-4fd3-9c25-ac9a6c3c4040" />
@@ -107,7 +107,7 @@ The version of PHP that osTicket is using needs Microsoft Visual C++ Redistribut
 
 ### Step 7: Configure PHP
 
-Open up Internet Information Services (ISS) as an Admin. Down in the search bar, enter ISS and it should be listed. You want to run this service as an Admin, either right-click and run as administrator or select it in the search menu. From inside the ISS Manager, you'll want to find the PHP Manager and double-click it. Inside the PHP Manager, there will be a "Register new PHP version" select this. Then navigate to the the new PHP Folder in the C: drive that we added and select the executable inside there. The route should look like this: `C:\PHP\php-cgi.exe`. Afterwards we will need to restart the server. This can be done by clicking back to the home menu and selecting **Restart Server** on the right-side bar. Altneratively, you can also manually Stop and Start the server.
+Open up Internet Information Services (IIS) as an Admin. Down in the search bar, enter IIS and it should be listed. You want to run this service as an Admin, either right-click and run as administrator or select it in the search menu. From inside the IIS Manager, you'll want to find the PHP Manager and double-click it. Inside the PHP Manager, there will be a "Register new PHP version" select this. Then navigate to the the new PHP Folder in the C: drive that we added and select the executable inside there. The route should look like this: `C:\PHP\php-cgi.exe`. Afterwards we will need to restart the server. This can be done by clicking back to the home menu and selecting **Restart Server** on the right-side bar. Altneratively, you can also manually Stop and Start the server.
 
 <br>
 <img width="1239" height="512" alt="image" src="https://github.com/user-attachments/assets/9d027fb4-6d81-4abd-99bf-b364e6649e46" />
@@ -118,7 +118,7 @@ Open up Internet Information Services (ISS) as an Admin. Down in the search bar,
 
 ### Step 8: Installing osTicket
 
-Now that we have all the dependancies set up and installed, we can finally install osTicket. So, back in the "osTicket-Installation-Files folder" we're going to want to extract the folder inside there. So right-click the osTicket zipped folder and select Extract All and click through it. Now the extracted folder should be inside. Open the Folder and you should see two folders, "scripts" and "upload". Copy the upload folder and put it inside the folder `C:\inetpub\wwwroot` which is on your C: drive, where we made the PHP Folder and inside the inetpub folder. This is the root of our web server and how it will display osTicket. Make sure you rename the upload folder to **osTicket** this is very important! Once that's finished, Restart the ISS server again like before.
+Now that we have all the dependancies set up and installed, we can finally install osTicket. So, back in the "osTicket-Installation-Files folder" we're going to want to extract the folder inside there. So right-click the osTicket zipped folder and select Extract All and click through it. Now the extracted folder should be inside. Open the Folder and you should see two folders, "scripts" and "upload". Copy the upload folder and put it inside the folder `C:\inetpub\wwwroot` which is on your C: drive, where we made the PHP Folder and inside the inetpub folder. This is the root of our web server and how it will display osTicket. Make sure you rename the upload folder to **osTicket** this is very important! Once that's finished, Restart the IIS server again like before.
 
 <br>
 <img width="1368" height="413" alt="image" src="https://github.com/user-attachments/assets/514afc1b-b4ba-4f82-bb16-03d91f7b2ec8" />
@@ -128,7 +128,7 @@ Now that we have all the dependancies set up and installed, we can finally insta
 
 ### Step 9: Open osTicket Web Page and Enabling PHP Extensions
 
-Back in the ISS Manager, navigate to **Sites → Default Web Site → osTicket** and in the right-hand bar should be a "Browse: *.80". Select this and it will open our web browser to our newly installed osTicket. This will be a great way to check if we've done everything correctly. Now if you take a look at the listed items in the osTicket Installer, we have already installed PHP and MySQL but now we need to enable a few PHP extensions. Go back to the ISS Manager and navigate back to the PHP Manager. There will be an option down below called "Enable or Disable an Extension". This should open up a list of extensions. We're going to enable:
+Back in the IIS Manager, navigate to **Sites → Default Web Site → osTicket** and in the right-hand bar should be a "Browse: *.80". Select this and it will open our web browser to our newly installed osTicket. This will be a great way to check if we've done everything correctly. Now if you take a look at the listed items in the osTicket Installer, we have already installed PHP and MySQL but now we need to enable a few PHP extensions. Go back to the IIS Manager and navigate back to the PHP Manager. There will be an option down below called "Enable or Disable an Extension". This should open up a list of extensions. We're going to enable:
 
 - `php_imap.dll`  
 - `php_intl.dll`  
@@ -143,7 +143,7 @@ Back in the ISS Manager, navigate to **Sites → Default Web Site → osTicket**
 
 ### Step 10: osTicket Configurations
 
-Before we can finally install osTicket, we'll need to do some more configurations. First navigate back to the C: drive and into `inetpub → wwwroot → osticket → include` and find the file `ost-sampleconfig.php`. We want to rename this file to `ost-config.php`. It must be named exactly, be careful not to typo it. Next, osTicket needs permission to make changes to that same file. Right-click it → Properties → Security → Advanced → Disable Inheritance → Remove all inherited permissions from this object. Then we're going to add a new permissions, so select Add and then at the top should be a "Select a Principal" option. Click that and it should open a new menu. Inside the "Enter a name..." we're going to enter **Everyone**. You can click "Check Names" on the right for it to autoselect. And then check **Full Control**. Go ahead and click apply and ok to all the menus.
+Before we can finally install osTicket, we'll need to do some more configurations. First navigate back to the C: drive and into `inetpub → wwwroot → osticket → include` and find the file `ost-sampleconfig.php`. We want to rename this file to `ost-config.php`. It must be named exactly, be careful not to typo it. Next, osTicket needs permIISion to make changes to that same file. Right-click it → Properties → Security → Advanced → Disable Inheritance → Remove all inherited permIISions from this object. Then we're going to add a new permIISions, so select Add and then at the top should be a "Select a Principal" option. Click that and it should open a new menu. Inside the "Enter a name..." we're going to enter **Everyone**. You can click "Check Names" on the right for it to autoselect. And then check **Full Control**. Go ahead and click apply and ok to all the menus.
 
 <br>
 <img width="1344" height="784" alt="image" src="https://github.com/user-attachments/assets/314b6ac4-a17e-4291-b63f-099b5cb762ae" />
@@ -179,4 +179,4 @@ You can log in and explore both the admin and end-user portals using the links b
 ### Optional Cleanup
 
 - Delete: `C:\inetpub\wwwroot\osTicket\setup`  
-- Set permissions to **Read Only**: `C:\inetpub\wwwroot\osTicket\include\ost-config.php`
+- Set permIISions to **Read Only**: `C:\inetpub\wwwroot\osTicket\include\ost-config.php`
